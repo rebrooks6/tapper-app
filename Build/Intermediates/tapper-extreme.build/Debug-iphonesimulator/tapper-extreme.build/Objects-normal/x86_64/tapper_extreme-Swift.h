@@ -107,13 +107,27 @@ SWIFT_CLASS("_TtC14tapper_extreme11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
+@class UIImageView;
+@class UITextField;
+@class UILabel;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC14tapper_extreme14ViewController")
 @interface ViewController : UIViewController
-- (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+@property (nonatomic) NSInteger maxTaps;
+@property (nonatomic) NSInteger currentTaps;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified logoImg;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified howManyTapsTxt;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified playBtn;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified tapBtn;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified tapsLbl;
+- (IBAction)onCoinTapped:(UIButton * __null_unspecified)sender;
+- (IBAction)onPlayBtnPressed:(UIButton * __null_unspecified)sender;
+- (void)restartGame;
+- (BOOL)isGameOver;
+- (void)updateTapsLbl;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

@@ -34,9 +34,12 @@
                                     <constraint firstAttribute="height" constant="120" id="gTh-dD-ubI"/>
                                 </constraints>
                                 <state key="normal" image="playbtn"/>
+                                <connections>
+                                    <action selector="onPlayBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEN-1Q-ZZw"/>
+                                </connections>
                             </button>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4R2-9m-MqF" userLabel="tapTxt">
-                                <rect key="frame" x="176" y="331" width="249" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="How many taps to win?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4R2-9m-MqF" userLabel="tapTxt">
+                                <rect key="frame" x="176" y="316" width="249" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="91P-jh-bsP"/>
                                     <constraint firstAttribute="width" constant="249" id="9xY-7n-7Zd"/>
@@ -51,6 +54,9 @@
                                     <constraint firstAttribute="height" constant="177" id="ZU4-po-Aiq"/>
                                 </constraints>
                                 <state key="normal" image="coin"/>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yit-4u-asO"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="100 Taps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EzN-ln-Nb1" userLabel="TapsLbl">
                                 <rect key="frame" x="170" y="219" width="260" height="86"/>
@@ -81,6 +87,13 @@
                             <constraint firstItem="NnM-y0-Rqx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="yJR-vW-iQo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="howManyTapsTxt" destination="4R2-9m-MqF" id="qUw-hW-cNC"/>
+                        <outlet property="logoImg" destination="NnM-y0-Rqx" id="TsH-8Z-Vg3"/>
+                        <outlet property="playBtn" destination="wTc-j3-kPR" id="90O-oA-Yaz"/>
+                        <outlet property="tapBtn" destination="F87-Kj-KsT" id="3LH-du-ccd"/>
+                        <outlet property="tapsLbl" destination="EzN-ln-Nb1" id="JGf-iT-6vV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
