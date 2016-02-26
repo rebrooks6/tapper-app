@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -86,6 +86,9 @@
                             <constraint firstItem="F87-Kj-KsT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sHC-Du-jiE"/>
                             <constraint firstItem="NnM-y0-Rqx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="yJR-vW-iQo"/>
                         </constraints>
+                        <connections>
+                            <action selector="userTappedBackground:" destination="BYZ-38-t0r" eventType="touchDown" id="shd-oK-Mdp"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="howManyTapsTxt" destination="4R2-9m-MqF" id="qUw-hW-cNC"/>

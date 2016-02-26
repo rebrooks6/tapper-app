@@ -20,6 +20,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tapBtn: UIButton!
     @IBOutlet weak var tapsLbl: UILabel!
     
+    
+    @IBAction func userTappedBackground(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
     @IBAction func onCoinTapped(sender: UIButton!) {
         currentTaps++
         updateTapsLbl()
